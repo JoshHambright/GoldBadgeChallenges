@@ -9,7 +9,7 @@ namespace Cafe
     public class MenuItem_Repo
     {
         //Repo Field
-        private List<MenuItem> _menu = new List<MenuItem>;
+        private List<MenuItem> _menu = new List<MenuItem>();
 
         //Create
         public bool AddMenuItem(MenuItem item)
