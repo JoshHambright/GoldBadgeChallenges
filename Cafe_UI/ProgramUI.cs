@@ -71,11 +71,11 @@ namespace Cafe_UI
                         AddNewItem();
                         break;
                     case "3":
-                    //UpdateMenuItem();
-                    //break;
+                        UpdateMenuItem();
+                        break;
                     case "4":
-                    //DeleteItem();
-                    //break;
+                        DeleteItem();
+                        break;
                     case "5":
                         continueToRun = false;
                         break;
@@ -167,6 +167,117 @@ namespace Cafe_UI
 
             Console.ReadKey();
 
+        }
+
+        public void UpdateMenuItem()
+        {
+            MenuItem oldItem = new MenuItem();
+            Console.Clear();
+            Header();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("-- Update Existing Menu Item --");
+            Console.WriteLine("Enter the Meal # for the Menu Item you'd like to update:");
+            int oldMenuNum = Convert.ToInt32(Console.ReadLine());
+            oldItem = _menu.GetMenuItemByMealNum(oldMenuNum);
+            bool looper = true;
+            while (looper)
+            {
+                Console.Clear();
+                Console.WriteLine("-- Menu Item --");
+                Console.WriteLine("1> Meal #:            " + oldItem.MealNumber);
+                Console.WriteLine("2> Meal Name:         " + oldItem.MealName);
+                Console.WriteLine("3> Meal Description:  " + oldItem.Description);
+                Console.WriteLine("4> Meal Ingredients:  " + oldItem.Ingredients);
+                Console.WriteLine("5> Meal Price:        $" + oldItem.Price);
+                Console.WriteLine("6> Done Editing");
+                Console.WriteLine("Please enter the number for the value you'd like to edit");
+                string menuSelection = Console.ReadLine();
+                switch (menuSelection)
+                {
+                    case "1":
+                        Console.WriteLine("Enter new Meal #:");
+                        oldItem.MealNumber = Convert.ToInt32(Console.ReadLine());
+                        break;
+                    case "2":
+                        Console.WriteLine("Enter new Name:");
+                        oldItem.MealName = Console.ReadLine();
+                        break;
+                    case "3":
+                        Console.WriteLine("Enter new meal Description:");
+                        oldItem.Description = Console.ReadLine();
+                        break;
+                    case "4":
+                        Console.WriteLine("Enter new Ingredients:");
+                        oldItem.Ingredients = Console.ReadLine();
+                        break;
+                    case "5":
+                        Console.WriteLine("Enter new Price:");
+                        oldItem.Price = Convert.ToDouble(Console.ReadLine());
+                        break;
+                    case "6":
+                        looper = false;
+                        break;
+                }
+            }
+            bool wasUpdate = _menu.UpdateExistingMenuItem(oldMenuNum, oldItem);
+            if (wasUpdate == true)
+            {
+                Console.WriteLine("Menu Item updated. \nPress any key to continue");
+            }
+            else
+            {
+                Console.WriteLine("Oops. Something went wrong. Please try updating again. \nPress any key to continue");
+            }
+
+            Console.ReadKey();
+
+
+
+        }
+
+        public void DeleteItem()
+        {
+            MenuItem oldItem = new MenuItem();
+            Console.Clear();
+            Header();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("-- Deleting Item --");
+            Console.WriteLine("Enter the Meal # of the item you'd like to delete:");
+            int mealNum = Convert.ToInt32(Console.ReadLine());
+            oldItem = _menu.GetMenuItemByMealNum(mealNum);
+            Console.WriteLine("-- Menu Item To Delete --");
+            Console.WriteLine("Meal #:            " + oldItem.MealNumber);
+            Console.WriteLine("Meal Name:         " + oldItem.MealName);
+            Console.WriteLine("Meal Description:  " + oldItem.Description);
+            Console.WriteLine("Meal Ingredients:  " + oldItem.Ingredients);
+            Console.WriteLine("Meal Price:        $" + oldItem.Price);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("!!!!! WARNING DELETE CAN NOT BE UNDONE !!!!!  \nDo you want to continue Deleting this item?");
+            Console.WriteLine("Enter Y to to continue deleting this Item. Enter N to return to the main menu.");
+            Console.ResetColor();
+            string deleteConfirm = Console.ReadLine();
+            if (deleteConfirm.ToLower() == "y")
+            {
+                bool deleteResult = _menu.DeleteMenuItem(oldItem);
+                if (deleteResult == true)
+                {
+                    Console.WriteLine("Item deleted Successfully.");
+                    Console.WriteLine("Press any key to continue.");
+
+                }
+                else
+                {
+                    Console.WriteLine("Something went wrong. Please try again.");
+                    Console.WriteLine("Press any key to continue.");
+
+                }
+            }
+            else
+            {
+                Console.WriteLine("Delete Canceled. \nPress any Key to return to main menu.");
+
+            }
+            Console.ReadKey();
         }
     }
 }
