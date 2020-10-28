@@ -79,6 +79,8 @@ namespace Outing_UI
                     case "4":
                         continueToRun = false;
                         break;
+                    default:
+                        break;
 
                 }
             }
