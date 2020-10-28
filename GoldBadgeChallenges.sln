@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutingTests", "OutingTests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outing_UI", "Outing_UI\Outing_UI.csproj", "{AB0048AB-47EE-4EC0-8A7C-5EDF06530E2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe", "Cafe\Cafe.csproj", "{6A2E912C-D887-4767-B4F3-7B3DBA0D004B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe_Tests", "Cafe_Tests\Cafe_Tests.csproj", "{43B6C6AD-C858-46CC-A8DD-328B5C5E3E60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{AB0048AB-47EE-4EC0-8A7C-5EDF06530E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB0048AB-47EE-4EC0-8A7C-5EDF06530E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB0048AB-47EE-4EC0-8A7C-5EDF06530E2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A2E912C-D887-4767-B4F3-7B3DBA0D004B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A2E912C-D887-4767-B4F3-7B3DBA0D004B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A2E912C-D887-4767-B4F3-7B3DBA0D004B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A2E912C-D887-4767-B4F3-7B3DBA0D004B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43B6C6AD-C858-46CC-A8DD-328B5C5E3E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43B6C6AD-C858-46CC-A8DD-328B5C5E3E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43B6C6AD-C858-46CC-A8DD-328B5C5E3E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43B6C6AD-C858-46CC-A8DD-328B5C5E3E60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
