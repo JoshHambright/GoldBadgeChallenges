@@ -16,13 +16,33 @@ namespace Cafe_UI
         //Methods
         public void Run()
         {
-            //SeedItemMenu();
+            SeedItemMenu();
             MainMenu();
         }
 
         public void SeedItemMenu()
         {
             //Seed content for menu
+            //Arrange
+            MenuItem meal1 = new MenuItem(01,
+                "Burger and Fries",
+                "Our delicious all beef burger and a medium fry",
+                "Bun, Burger, Pickles, Onion, Lettuce, Tomato, Fries",
+                8);
+            MenuItem meal2 = new MenuItem(02,
+                "Double Chese Burger with Fries",
+                "Double the burger and double the fun!",
+                "Bun, Burger,Cheese, Pickles, Onion, Lettuce, Tomato, Fries",
+                8);
+            MenuItem meal3 = new MenuItem(03,
+                "Pork Tenderloin and Fries",
+                "Breaded and fried pork Tenderloin with a side of fries",
+                "Bun, Fried Tenderloin, Pickles, Onion, Lettuce, Tomato, Fries",
+                8);
+
+            _menu.AddMenuItem(meal1);
+            _menu.AddMenuItem(meal2);
+            _menu.AddMenuItem(meal3);
         }
 
         public void MainMenu()
@@ -32,7 +52,6 @@ namespace Cafe_UI
             {
                 Console.Clear();
                 Header();
-                Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("-- Main Menu --");
                 Console.WriteLine("1> View Cafe Menu Items");
@@ -46,11 +65,11 @@ namespace Cafe_UI
                 switch (menuSelection)
                 {
                     case "1":
-                    //ShowMenu();
-                    //break;
+                        ShowMenu();
+                        break;
                     case "2":
-                    //AddNewItem();
-                    //break;
+                        AddNewItem();
+                        break;
                     case "3":
                     //UpdateMenuItem();
                     //break;
@@ -73,6 +92,80 @@ namespace Cafe_UI
             Console.WriteLine("|K||o||m||o||d||o| |C||a||f||e|");
             Console.WriteLine("+-++-++-++-++-++-+ +-++-++-++-+");
             Console.ResetColor();
+
+        }
+
+        public void ShowMenu()
+        {
+            Console.Clear();
+            Header();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("--- Displaying all Menu Items ---");
+            List<MenuItem> menuItems = _menu.GetMenu();
+
+            foreach (MenuItem item in menuItems)
+            {
+                Console.WriteLine("Meal #:            " + item.MealNumber);
+                Console.WriteLine("Meal Name:         " + item.MealName);
+                Console.WriteLine("Meal Description:  " + item.Description);
+                Console.WriteLine("Meal Ingredients:  " + item.Ingredients);
+                Console.WriteLine("Meal Price:        $" + item.Price);
+                Console.WriteLine("");
+            }
+
+            Console.WriteLine("Press Enter to return to main menu.");
+            Console.ReadKey();
+        }
+
+        public void AddNewItem()
+        {
+            MenuItem newItem = new MenuItem();
+            bool looper = true;
+
+            while (looper)
+            {
+
+                Console.Clear();
+                Header();
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("-- Adding New Menu Item --");
+                Console.WriteLine("Enter Meal #:");
+                newItem.MealNumber = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter Meal Name:");
+                newItem.MealName = Console.ReadLine();
+                Console.WriteLine("Enter Meal Description:");
+                newItem.Description = Console.ReadLine();
+                Console.WriteLine("Enter list of meal ingredients:");
+                newItem.Ingredients = Console.ReadLine();
+                Console.WriteLine("Enter price of meal:");
+                newItem.Price = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("-- New Item --");
+                Console.WriteLine("Meal #:            " + newItem.MealNumber);
+                Console.WriteLine("Meal Name:         " + newItem.MealName);
+                Console.WriteLine("Meal Description:  " + newItem.Description);
+                Console.WriteLine("Meal Ingredients:  " + newItem.Ingredients);
+                Console.WriteLine("Meal Price:        $" + newItem.Price);
+                Console.WriteLine("");
+                Console.WriteLine("Is the new menu item correct? \nEnter Y to continue adding New Item to the menu. Enter N to start over creating New Item.");
+                string isCorrect = Console.ReadLine();
+                if (isCorrect.ToLower() == "y")
+                {
+                    looper = false;
+                }
+            }
+            bool wasAdded = _menu.AddMenuItem(newItem);
+            if (wasAdded == true)
+            {
+                Console.WriteLine("Menu Item added successfully");
+                Console.WriteLine("Press any key to return to the main menu");
+            }
+            else
+            {
+                Console.WriteLine("Oops! Something went wrong. Your new item was not added to the menu. Please try again.");
+                Console.WriteLine("Press any key to return to the main menu");
+            }
+
+            Console.ReadKey();
 
         }
     }
