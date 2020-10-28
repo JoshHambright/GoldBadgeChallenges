@@ -11,7 +11,7 @@ namespace Outing_UI
     public class ProgramUI
     {
 
-        //Fields
+        //Repo
         private Outing_Repo _repo = new Outing_Repo();
 
 
