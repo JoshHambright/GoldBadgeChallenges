@@ -82,7 +82,7 @@ namespace Cafe_Tests
         [TestMethod]
         public void DeleteMenuItem_ShouldReturnTrue() //Delete
         {
-            //Act
+            //Arrange
             MenuItem_Repo menu = new MenuItem_Repo();
             MenuItem item = new MenuItem(01,
                 "Burger and Fries",

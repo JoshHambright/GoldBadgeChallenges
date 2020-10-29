@@ -23,7 +23,7 @@ namespace Cafe_UI
         public void SeedItemMenu()
         {
             //Seed content for menu
-            //Arrange
+            
             MenuItem meal1 = new MenuItem(01,
                 "Burger and Fries",
                 "Our delicious all beef burger and a medium fry",
@@ -253,7 +253,7 @@ namespace Cafe_UI
             Console.WriteLine("Meal Price:        $" + oldItem.Price);
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("!!!!! WARNING DELETE CAN NOT BE UNDONE !!!!!  \nDo you want to continue Deleting this item?");
-            Console.WriteLine("Enter Y to to continue deleting this Item. Enter N to return to the main menu.");
+            Console.WriteLine("Enter Y to continue deleting this Item. Enter N to return to the main menu.");
             Console.ResetColor();
             string deleteConfirm = Console.ReadLine();
             if (deleteConfirm.ToLower() == "y")
