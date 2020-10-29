@@ -13,6 +13,7 @@ namespace Badges
 
         public List<string> Doors { get; set; }
 
+        public Badge() { }
         public Badge(int id)
         {
             BadgeID = id;
