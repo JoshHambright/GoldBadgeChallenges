@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Badges", "Badges\Badges.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Badges_Tests", "Badges_Tests\Badges_Tests.csproj", "{0E621BE1-A6C4-4414-949A-622650CAC827}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Badges_UI", "Badges_UI\Badges_UI.csproj", "{71FEA5D6-1C30-41C2-8167-718350DB05C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{0E621BE1-A6C4-4414-949A-622650CAC827}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E621BE1-A6C4-4414-949A-622650CAC827}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E621BE1-A6C4-4414-949A-622650CAC827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71FEA5D6-1C30-41C2-8167-718350DB05C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71FEA5D6-1C30-41C2-8167-718350DB05C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71FEA5D6-1C30-41C2-8167-718350DB05C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71FEA5D6-1C30-41C2-8167-718350DB05C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
