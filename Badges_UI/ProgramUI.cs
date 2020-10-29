@@ -57,7 +57,7 @@ namespace Badges_UI
                         DeleteAllDoorsOnBadge();
                         break;
                     case "4":
-                        //ViewAll();
+                        ViewAll();
                         break;
                     case "5":
                         continueToRun = false;
@@ -76,33 +76,42 @@ namespace Badges_UI
             Console.WriteLine("=-=-=-=- Add a Badge -=-=-=-=");
             Console.WriteLine("What is the number on the Badge:");
             int badgeNum = Convert.ToInt32(Console.ReadLine());
-            Badge newBadge = new Badge(badgeNum);
-            bool looper = true;
-            List<string> doors = new List<string>();
-            while (looper)
+            if (_repo.GetABadgeByID(badgeNum) != null)
             {
-                Console.WriteLine("Enter a door that Badge #" + badgeNum + " needs access to: ");
-                doors.Add(Console.ReadLine());
-                Console.WriteLine("Any other doors (y/n)?");
-                string moreDoors = Console.ReadLine();
-                if (moreDoors.ToLower() == "n")
-                {
-                    looper = false;
-                }
-            }
-            newBadge.Doors = doors;
-            string doorResult = string.Join(",", doors);
-            bool wasAdded = _repo.AddBadge(newBadge);
-            if (wasAdded == true)
-            {
-                Console.WriteLine($"Badge #{newBadge.BadgeID} added Successfully with access to Doors: {doorResult}.");
-
+                Console.WriteLine("Badge already exists. Try Updating badge instead of Adding");
+                Console.WriteLine("Press any key to return to main menu.");
             }
             else
             {
-                Console.WriteLine($"Oops! Something went wrong adding Badge #{newBadge.BadgeID}. Please try again.");
+
+                Badge newBadge = new Badge(badgeNum);
+                bool looper = true;
+                List<string> doors = new List<string>();
+                while (looper)
+                {
+                    Console.WriteLine("Enter a door that Badge #" + badgeNum + " needs access to: ");
+                    doors.Add(Console.ReadLine());
+                    Console.WriteLine("Any other doors (y/n)?");
+                    string moreDoors = Console.ReadLine();
+                    if (moreDoors.ToLower() == "n")
+                    {
+                        looper = false;
+                    }
+                }
+                newBadge.Doors = doors;
+                string doorResult = string.Join(",", doors);
+                bool wasAdded = _repo.AddBadge(newBadge);
+                if (wasAdded == true)
+                {
+                    Console.WriteLine($"Badge #{newBadge.BadgeID} added Successfully with access to Doors: {doorResult}.");
+
+                }
+                else
+                {
+                    Console.WriteLine($"Oops! Something went wrong adding Badge #{newBadge.BadgeID}. Please try again.");
+                }
+                Console.WriteLine("Press any key to return to the main menu.");
             }
-            Console.WriteLine("Press any key to return to the main menu.");
             Console.ReadKey();
         }
 
@@ -115,9 +124,9 @@ namespace Badges_UI
             int badgeNum = Convert.ToInt32(Console.ReadLine());
             Badge badgeToUpdate = _repo.GetABadgeByID(badgeNum);
             List<string> doorsOnBadge = new List<string>();
-            doorsOnBadge = badgeToUpdate.Doors;
             if (badgeToUpdate != null)
             {
+                doorsOnBadge = badgeToUpdate.Doors;
                 bool looper = true;
                 while (looper)
                 {
@@ -224,9 +233,26 @@ namespace Badges_UI
             }
             Console.WriteLine("Press any key to return to the main menu");
             Console.ReadKey();
-
         }
 
+        public void ViewAll()
+        {
+            Console.Clear();
+            Header();
+            Console.WriteLine("=-=-=-=- View All Badges -=-=-=-=");
+            Console.WriteLine();
+            Console.WriteLine("Badge#           Door Access:");
+            Dictionary<int, List<string>> badges = _repo.GetAllBadges();
+            foreach (KeyValuePair<int, List<string>> badge in badges)
+            {
+                string doorsResult = string.Join(",", badge.Value);
+                Console.WriteLine($"{badge.Key}            {doorsResult}");
+
+            }
+            Console.WriteLine();
+            Console.WriteLine("Press any key to return to main menu.");
+            Console.ReadKey();
+        }
 
         public void Header()
         {
