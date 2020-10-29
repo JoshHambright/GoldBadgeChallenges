@@ -70,8 +70,8 @@ namespace Greeting_UI
                     DeleteCustomer();
                     break;
                     case "5":
-                    //ListView();
-                    //break;
+                    ListView();
+                    break;
                     case "6":
                         continueToRun = false;
                         break;
@@ -327,6 +327,22 @@ namespace Greeting_UI
 
         public void ListView()
         {
+            Console.Clear();
+            KomodoLogo();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("=+= Viewing All Customer Entries =+=");
+            Console.WriteLine();
+
+            List<Customer> customers = _repo.GetAllCustomers();
+            customers.OrderBy(x => x.LastName).ThenBy(x => x.FirstName);
+            Console.WriteLine("First Name".PadRight(10) +"Last Name".PadLeft(15)+ "Type".PadLeft(15)  + "Email".PadLeft(10));
+            foreach (Customer customer in customers)
+            {
+                Console.WriteLine(customer.FirstName.PadRight(15) + customer.LastName.PadLeft(10) + customer.Type.ToString().PadLeft(15)+ "     " + customer.Email.PadLeft(10) );
+                Console.WriteLine();
+            }
+            Console.WriteLine("Press any key to continue.");
+            Console.ReadKey();
 
         }
 
