@@ -39,7 +39,7 @@ namespace Claims
             return null;
         }
 
-        ////Update a Claim //NOT IMPLIMENTED
+        ////Update a Claim //NOT IMPLIMENTED NOT TESTED
         //public bool UpdateClaim(int claimID,Claim newClaim)
         //{
         //    Claim claim = GetClaimByID(claimID);

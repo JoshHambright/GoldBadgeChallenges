@@ -22,8 +22,8 @@ namespace Claims
         {
             get
             {
-                TimeSpan daysBetween = DateOfIncident - DateOfClaim;
-                if (daysBetween.Days <= 30)
+                TimeSpan diff = DateOfClaim.Subtract(DateOfIncident);
+                if (diff.Days <= 30)
                 {
                     return true;
                 }
