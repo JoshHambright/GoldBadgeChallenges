@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Claims_UI", "Claims_UI\Clai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenPlan", "GreenPlan\GreenPlan.csproj", "{093FA166-9DC9-4897-9B18-1E55537F1174}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenPlan_Tests", "GreenPlan_Tests\GreenPlan_Tests.csproj", "{9E1B7480-94FA-4367-A8D9-A0DD0B975455}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{093FA166-9DC9-4897-9B18-1E55537F1174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{093FA166-9DC9-4897-9B18-1E55537F1174}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{093FA166-9DC9-4897-9B18-1E55537F1174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E1B7480-94FA-4367-A8D9-A0DD0B975455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E1B7480-94FA-4367-A8D9-A0DD0B975455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E1B7480-94FA-4367-A8D9-A0DD0B975455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E1B7480-94FA-4367-A8D9-A0DD0B975455}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
