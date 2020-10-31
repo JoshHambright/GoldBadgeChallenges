@@ -11,7 +11,16 @@ namespace GreenPlan
     {
         private List<Car> _repo = new List<Car>();
 
-        
+        //Create
+
+        //Read
+
+        //Get All Cars
+
+        //Get IndividualCar
+
+
+        //Update Car
 
     }
 }
