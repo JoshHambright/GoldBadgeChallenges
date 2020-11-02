@@ -11,7 +11,13 @@ namespace GreenPlan.Cars
 
         public double BatteryCapacity { get; set; }
         public double ChargeTime { get; set; }
-
+        public string CarClassType
+        {
+            get
+            {
+                return "Electric Car";
+            }
+        }
 
         public ElectricCar() { }
 

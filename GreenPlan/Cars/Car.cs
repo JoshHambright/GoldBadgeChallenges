@@ -20,10 +20,11 @@ namespace GreenPlan.Cars
         {
             get
             {
-                string ID = Year + Make + Model;
+                string ID = Year.ToString()+Make.ToLower()+Model.ToLower();
                 return ID;
             }
         }
+
 
         public Car() { }
 

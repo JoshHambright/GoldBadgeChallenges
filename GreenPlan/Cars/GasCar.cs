@@ -10,7 +10,13 @@ namespace GreenPlan.Cars
     {
         public double AvgMPG { get; set; }
 
-
+        public string CarClassType
+        {
+            get
+            {
+                return "Gas Car";
+            }
+        }
         public GasCar() { }
 
         public GasCar(string make, string model, int year)

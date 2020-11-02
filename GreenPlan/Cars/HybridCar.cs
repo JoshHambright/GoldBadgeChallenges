@@ -11,7 +11,13 @@ namespace GreenPlan.Cars
         public double AvgMPG { get; set; }
         public double BatteryCapacity { get; set; }
 
-
+        public string CarClassType
+        {
+            get
+            {
+                return "Hybrid Car";
+            }
+        }
 
         public HybridCar() { }
 
