@@ -45,7 +45,6 @@
     <Compile Include="Cars\ElectricCar.cs" />
     <Compile Include="Cars\GasCar.cs" />
     <Compile Include="Cars\HybridCar.cs" />
-    <Compile Include="Repos\GasCar_Repo.cs" />
     <Compile Include="Repos\Car_Repo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
