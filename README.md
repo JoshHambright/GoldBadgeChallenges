@@ -3,10 +3,14 @@
 ### Business Solution Console Apps for [Elevent Fifty Academy](https://elevenfifty.org/) Software Development Gold Badge Challenges
 
 
-#####
+###
 Collection of console apps produced using C# in visual studio.  Apps all utilize CRUD method to edit a repo to complete outlined goals of each challenge.
 Each app is organized into a class library with classes and a repo to organize the objects neccesary to complete the challenge, unit test projects to test all CRUD
 methods employed in the project and a console app project with all UI code.
+
+## Installation
+
+Open the GoldBadgeChallenges Solution in Microsoft Visual Studio and each project is organized into a Class Library Project, a Unit Test Project, and a Console App.
 
 ---
 ### Komodo Company Outing Database
@@ -42,7 +46,8 @@ adding and deleting items.
 
 ![alt text](https://raw.githubusercontent.com/JoshHambright/GoldBadgeChallenges/master/assets/cafe.png "Cafe App Screenshot")
 ---
-
+## Contact
+If you'd like to contact me to discuss this work or any other work I'd love to connect via [LinkedIn](www.linkedin.com/in/josh-hambright)
 
 
 
