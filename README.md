@@ -47,7 +47,7 @@ adding and deleting items.
 ![alt text](https://raw.githubusercontent.com/JoshHambright/GoldBadgeChallenges/master/assets/cafe.png "Cafe App Screenshot")
 ---
 ## Contact
-If you'd like to contact me to discuss this work or any other work I'd love to connect via [LinkedIn](www.linkedin.com/in/josh-hambright)
+If you'd like to contact me to discuss this work or any other work I'd love to connect via [LinkedIn](https://www.linkedin.com/in/josh-hambright)
 
 
 
