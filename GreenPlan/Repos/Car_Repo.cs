@@ -40,25 +40,37 @@ namespace GreenPlan
 
 
         //Update Car in Repo
-        public bool UpdateExistingCar(string id)
+        public bool UpdateExistingCar(string id, Car newCar)
         {
             var oldCar = GetCarByID(id);
             if (oldCar != null)
-            { //Check type of Car object.
+            { //Check type of Car object. //Implemented in other repos.
                 if (oldCar is HybridCar)
                 {
                     //Hybrid car stuff
+                    ((HybridCar)oldCar).AvgMPG = ((HybridCar)newCar).AvgMPG;
+                    ((HybridCar)oldCar).BatteryCapacity = ((HybridCar)newCar).BatteryCapacity;
+
                 }
                 else if (oldCar is GasCar)
                 {
-                    //Gas Car Stuff
+                    ((GasCar)oldCar).AvgMPG = ((GasCar)newCar).AvgMPG;
                 }
                 else if (oldCar is ElectricCar)
                 {
-                    //Electric car properties
+                    ((ElectricCar)oldCar).BatteryCapacity = ((ElectricCar)newCar).BatteryCapacity;
+                    ((ElectricCar)oldCar).ChargeTime = ((ElectricCar)newCar).ChargeTime;
+
+
                 }
 
                 // Rest of properties here
+                oldCar.Make = newCar.Make;
+                oldCar.Model = newCar.Model;
+                oldCar.Year = newCar.Year;
+                oldCar.Type = newCar.Type;
+                oldCar.AvgRange = newCar.AvgRange;
+
                 return true;
 
             }

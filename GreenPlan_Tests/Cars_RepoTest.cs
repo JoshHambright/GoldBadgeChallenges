@@ -59,13 +59,19 @@ namespace GreenPlan_Tests
         }
 
         [TestMethod]
-        public void UpdateExistingCar_() //Update a car
+        public void UpdateExistingCar_ShouldReturnTrue() //Update a car
         {
             //Arrange
+            GasCar car = new GasCar("ford", "mustang", 2020);
+            GasCar car2 = new GasCar("toyota", "camry", 2019, VehicleType.Sedan,624, 32);
+            Car_Repo repo = new Car_Repo();
+            repo.AddCar(car);
+            string id = "2020fordmustang";
 
             //Act
-
+            bool UpdateResult = repo.UpdateExistingCar(id, car2);
             //Assert
+            Assert.IsTrue(UpdateResult);
 
         }
 

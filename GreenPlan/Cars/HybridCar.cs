@@ -9,6 +9,8 @@ namespace GreenPlan.Cars
     public class HybridCar : Car
     {
         public double AvgMPG { get; set; }
+        public double BatteryCapacity { get; set; }
+
 
 
         public HybridCar() { }
@@ -19,7 +21,7 @@ namespace GreenPlan.Cars
             Model = model;
             Year = year;
         }
-        public HybridCar(string make, string model, int year, VehicleType type, double range, double mpg)
+        public HybridCar(string make, string model, int year, VehicleType type, double range, double mpg, double battery)
         {
             Make = make;
             Model = model;
@@ -27,6 +29,8 @@ namespace GreenPlan.Cars
             Type = type;
             AvgRange = range;
             AvgMPG = mpg;
+            BatteryCapacity = battery;
+
         }
     }
 }

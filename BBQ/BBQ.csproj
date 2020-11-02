@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{093FA166-9DC9-4897-9B18-1E55537F1174}</ProjectGuid>
+    <ProjectGuid>{C79F6B9E-8026-44B1-BC93-886E4AF76B7B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GreenPlan</RootNamespace>
-    <AssemblyName>GreenPlan</AssemblyName>
+    <RootNamespace>BBQ</RootNamespace>
+    <AssemblyName>BBQ</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,13 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cars\Car.cs" />
-    <Compile Include="Cars\ElectricCar.cs" />
-    <Compile Include="Cars\GasCar.cs" />
-    <Compile Include="Cars\HybridCar.cs" />
-    <Compile Include="Repos\GasCar_Repo.cs" />
-    <Compile Include="Repos\Car_Repo.cs" />
+    <Compile Include="Party.cs" />
+    <Compile Include="Tickets\Ticket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tickets\Ticket_Repo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

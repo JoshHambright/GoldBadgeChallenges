@@ -361,9 +361,6 @@ namespace Greeting_UI
             Console.WriteLine("      -- Komodo Insurance Customer Email App --");
             Console.ResetColor();
             Console.WriteLine();
-
-
-
         }
 
 

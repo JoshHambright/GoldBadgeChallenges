@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenPlan", "GreenPlan\Gree
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenPlan_Tests", "GreenPlan_Tests\GreenPlan_Tests.csproj", "{9E1B7480-94FA-4367-A8D9-A0DD0B975455}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenPlan_UI", "GreenPlan_UI\GreenPlan_UI.csproj", "{0F0A31CB-DCDA-4FF6-8710-6CD6E26705A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBQ", "BBQ\BBQ.csproj", "{C79F6B9E-8026-44B1-BC93-886E4AF76B7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,14 @@ Global
 		{9E1B7480-94FA-4367-A8D9-A0DD0B975455}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E1B7480-94FA-4367-A8D9-A0DD0B975455}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E1B7480-94FA-4367-A8D9-A0DD0B975455}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F0A31CB-DCDA-4FF6-8710-6CD6E26705A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F0A31CB-DCDA-4FF6-8710-6CD6E26705A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F0A31CB-DCDA-4FF6-8710-6CD6E26705A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F0A31CB-DCDA-4FF6-8710-6CD6E26705A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C79F6B9E-8026-44B1-BC93-886E4AF76B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C79F6B9E-8026-44B1-BC93-886E4AF76B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C79F6B9E-8026-44B1-BC93-886E4AF76B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C79F6B9E-8026-44B1-BC93-886E4AF76B7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
