@@ -24,7 +24,7 @@ namespace GreenPlan_UI
             GasCar car2 = new GasCar("Toyota", "Camry", 2019, VehicleType.Sedan, 624, 32);
             HybridCar car3 = new HybridCar("Toyota", "Prius", 2020, VehicleType.Sedan, 655, 52, 8.8);
             HybridCar car4 = new HybridCar("Honda", "Accord Hybrd", 2020, VehicleType.Sedan, 614.4, 48, 1.3);
-            IElectricCar car5 = new ElectricCar("Tesla", "ModelS", 2020, VehicleType.Sedan, 322, 75, 10);
+            ElectricCar car5 = new ElectricCar("Tesla", "ModelS", 2020, VehicleType.Sedan, 322, 75, 10);
             ElectricCar car6 = new ElectricCar("Hyundai", "Kona", 2020, VehicleType.HatchBack, 258, 64, 9);
             _repo.AddCar(car);
             _repo.AddCar(car2);
